@@ -68,40 +68,41 @@ export default {
     },
   methods:{
       pushItem(){
-        this.items.push(
-            {
-              icon: 'el-icon-s-home',
-              index: 'dashboard',
-              title: '系统首页'
-            }
-        )
-        if (this.user.role===0)
-        this.items.push({
-          icon: 'el-icon-s-order',
-          index: 'result',
-          title: '检测结果'
-        })
-        this.items.push({
-              icon: 'el-icon-s-data',
-              index: 'tube',
-              title: '试管管理'
-            },
-            {
-              icon: 'el-icon-document-checked',
-              index: 'job',
-              title: '任务管理'
-            })
+        // this.items.push(
+        //     {
+        //       icon: 'el-icon-s-home',
+        //       index: 'dashboard',
+        //       title: '系统首页'
+        //     }
+        // )
         if (this.user.role===0)
           this.items.push({
-          icon: 'el-icon-s-custom',
-          index: 'userinfo',
-          title: '人员信息'
-        })
-        this.items.push({
-          icon: 'el-icon-user-solid',
-          index: 'systemuser',
-          title: '系统用户'
-        })
+            icon: 'el-icon-s-custom',
+            index: 'userinfo',
+            title: '人员信息'
+          })
+        // if (this.user.role===0)
+        // this.items.push({
+        //   icon: 'el-icon-s-order',
+        //   index: 'result',
+        //   title: '检测结果'
+        // })
+        // this.items.push({
+        //       icon: 'el-icon-s-data',
+        //       index: 'tube',
+        //       title: '试管管理'
+        //     },
+        //     {
+        //       icon: 'el-icon-document-checked',
+        //       index: 'job',
+        //       title: '任务管理'
+        //     })
+        //
+        // this.items.push({
+        //   icon: 'el-icon-user-solid',
+        //   index: 'systemuser',
+        //   title: '系统用户'
+        // })
       },
     checkLogin(){
       this.axios.post(

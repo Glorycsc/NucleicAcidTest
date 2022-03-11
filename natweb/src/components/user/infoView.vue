@@ -88,20 +88,20 @@ export default {
   },
   methods: {
     checkLogin(){
-      this.axios.post(
-          '/wechat/checklogin',
-      ).then((response) =>{
-        if (response.data.flag){
-          //已登陆
-          this.getUserInfo()
-        }else {
-          Toast.fail(response.data.msg);
-          this.$router.push("/user/info")
-        }
-      })
-          .catch(function (error) {
-            console.log(error);
-          });
+      // this.axios.post(
+      //     '/wechat/checklogin',
+      // ).then((response) =>{
+      //   if (response.data.flag){
+      //     //已登陆
+      //     this.getUserInfo()
+      //   }else {
+      //     Toast.fail(response.data.msg);
+      //     this.$router.push("/user/info")
+      //   }
+      // })
+      //     .catch(function (error) {
+      //       console.log(error);
+      //     });
     },
     handleDelete(){
       Dialog.confirm({

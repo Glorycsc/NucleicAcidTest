@@ -7,7 +7,7 @@ export default new Router({
     routes: [
         {
             path: '/',
-            redirect:'/user'
+            redirect:'/user/info/edit'
         },
         {
             path: '/admin',
@@ -22,36 +22,39 @@ export default new Router({
             component: () => import('../components/admin/common/Home.vue'),
             meta: { title: '后台管理' },
             children: [
-                {
-                    path: '/admin/dashboard',
-                    component: () => import('../components/admin/Dashboard'),
-                    meta: { title: '后台管理首页' }
-                },
-                {
-                    path: '/admin/result',
-                    component: () => import('../components/admin/ResultTable'),
-                    meta: { title: '检测结果' }
-                },
-                {
-                    path: '/admin/tube',
-                    component: () => import('../components/admin/TubeManage'),
-                    meta: { title: '试管管理' }
-                },
-                {
-                    path: '/admin/job',
-                    component: () => import('../components/admin/JobManage'),
-                    meta: { title: '任务管理' }
-                },
+
+                // {
+                //     path: '/admin/dashboard',
+                //     component: () => import('../components/admin/Dashboard'),
+                //     meta: { title: '后台管理首页' }
+                // },
                 {
                     path: '/admin/userinfo',
                     component: () => import('../components/admin/UserInfo'),
                     meta: { title: '人员信息' }
                 },
-                {
-                    path: '/admin/systemuser',
-                    component: () => import('../components/admin/SystemUser'),
-                    meta: { title: '系统用户' }
-                }
+                // {
+                //     path: '/admin/result',
+                //     component: () => import('../components/admin/ResultTable'),
+                //     meta: { title: '检测结果' }
+                // },
+
+                // {
+                //     path: '/admin/tube',
+                //     component: () => import('../components/admin/TubeManage'),
+                //     meta: { title: '试管管理' }
+                // },
+                // {
+                //     path: '/admin/job',
+                //     component: () => import('../components/admin/JobManage'),
+                //     meta: { title: '任务管理' }
+                // },
+                //
+                // {
+                //     path: '/admin/systemuser',
+                //     component: () => import('../components/admin/SystemUser'),
+                //     meta: { title: '系统用户' }
+                // }
             ]
         },
         {

@@ -60,7 +60,7 @@ export default {
             '/checklogin'
         ).then((response) =>{
           if (response.data.flag){
-              this.$router.push('/admin/dashboard');
+              this.$router.push('/admin/userinfo');
           }else {
             //
           }
@@ -84,7 +84,7 @@ export default {
               this.loginBtnLoading=false
               if (response.data.flag){
                 this.$message.success(response.data.msg);
-                this.$router.push('/admin/dashboard');
+                this.$router.push('/admin/userinfo');
               }else {
                 this.$message.error(response.data.msg);
                 this.getCheckCode();
@@ -101,7 +101,7 @@ export default {
         });
       },
       getCheckCode(){
-        this.$refs.checkCodeRef.src=this.axios.defaults.baseURL+"/CheckCode"+"?time="+new Date().getTime();
+        // this.$refs.checkCodeRef.src=this.axios.defaults.baseURL+"/CheckCode"+"?time="+new Date().getTime();
       },
     },
   created() {

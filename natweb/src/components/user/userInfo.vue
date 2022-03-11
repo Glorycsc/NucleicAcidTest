@@ -34,19 +34,19 @@ export default {
   },
   methods: {
     checkLogin(){
-      axios.post(
-          '/wechat/checklogin',
-      ).then((response) =>{
-        if (response.data.flag){
-          //已登陆
-          this.getUserInfo()
-        }else {
-          this.getCode()
-        }
-      })
-          .catch(function (error) {
-            console.log(error);
-          });
+      // axios.post(
+      //     '/wechat/checklogin',
+      // ).then((response) =>{
+      //   if (response.data.flag){
+      //     //已登陆
+      //     this.getUserInfo()
+      //   }else {
+      //     this.getCode()
+      //   }
+      // })
+      //     .catch(function (error) {
+      //       console.log(error);
+      //     });
     },
     onClickLeft() {
       this.$router.push("/user")

@@ -41,16 +41,16 @@ export default {
   },
   methods:{
     checkLogin(){
-      this.axios.post(
-          '/operator/checklogin'
-      ).then((response) =>{
-        if (response.data.flag){
-          Toast.success(response.data.msg);
-          this.$router.push("/operator/selectjob")
-        }
-      }).catch(function (error) {
-        console.log(error);
-      });
+      // this.axios.post(
+      //     '/operator/checklogin'
+      // ).then((response) =>{
+      //   if (response.data.flag){
+      //     Toast.success(response.data.msg);
+      //     this.$router.push("/operator/selectjob")
+      //   }
+      // }).catch(function (error) {
+      //   console.log(error);
+      // });
     },
     onSubmit(){
       this.axios.post(

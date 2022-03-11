@@ -79,7 +79,8 @@
         },
         computed: {
             showTags() {
-                return this.tagsList.length > 0;
+                // return this.tagsList.length > 0;
+              return false;
             }
         },
         watch:{
